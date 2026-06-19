@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand"><a href="/">{{ .Site.Title }}</a></div>
+        <p class="brand-subtitle">{{ .Site.Params.subtitle }}</p>
+        <nav class="main-nav">
+          <a href="/">Home</a>
+          <a href="/resources/">Resources</a>
+          <a href="/notes/">Notes</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </header>
+      <main class="content">
+        {{ block "main" . }}{{ end }}
+      </main>
+      <footer class="site-footer">
+        <p>Tech Tinker Toolkit · Practical creative technology resources for classrooms, workshops, and makerspaces.</p>
+        <p>Designed for printable lesson packs, micro:bit activities, game design worksheets, animation resources, and STEAM learning.</p>
+      </footer>
+    </div>
+  </body>
+</html>

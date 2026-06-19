@@ -1,0 +1,34 @@
+# Tech Tinker Toolkit
+
+A friendly Hugo website for creative technology teachers, makers, students, and STEAM learners.
+
+## Local development
+
+1. Install Hugo 0.163.3 or newer.
+2. Run:
+
+```bash
+hugo server
+```
+
+3. Open `http://localhost:1313` in your browser.
+
+## Build the site
+
+```bash
+hugo
+```
+
+The generated site will appear in the `public/` folder.
+
+## Deploy to Netlify
+
+This site is prepared for Netlify deployment with `netlify.toml`.
+
+- Build command: `hugo`
+- Publish directory: `public`
+- Environment: `HUGO_VERSION=0.163.3`
+
+## Notes
+
+This is a separate site from `soundportfolio2026` and does not include references to that project.

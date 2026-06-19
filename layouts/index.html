@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.tagline }}</p>
+</section>
+<section class="article">
+  {{ .Content }}
+</section>
+<section class="feature-list">
+  <article class="feature-card">
+    <h3>Game Design</h3>
+    <p>Lesson-ready activities, idea sheets, and playtesting prompts to help learners build better levels and characters.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Micro:bit</h3>
+    <p>Hands-on coding badges, interactive wearables, and sensor challenges for classroom maker spaces.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Animation &amp; VFX</h3>
+    <p>Creative worksheets and project guides for motion, storytelling, stop motion, and visual effects basics.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Sound &amp; Story</h3>
+    <p>Intro sound design resources, remix ideas, and media-making supports for audio-rich projects.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Maker Projects</h3>
+    <p>Simple build guides, materials lists, and reflection prompts for low-cost STEAM projects.</p>
+  </article>
+</section>
+<section>
+  <h2>Featured resources</h2>
+  <div class="card-grid">
+    {{ range first 6 (where .Site.RegularPages "Section" "resources") }}
+      <article class="card">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary }}</p>
+        <div class="meta-line">
+          <span>{{ .Params.category }}</span>
+          <span>{{ .Params.level }}</span>
+        </div>
+        <a class="button" href="{{ .RelPermalink }}">Preview</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

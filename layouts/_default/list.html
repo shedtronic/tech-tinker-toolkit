@@ -1,0 +1,35 @@
+{{ define "main" }}
+<header class="section-header">
+  <h1>{{ .Title }}</h1>
+  {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+</header>
+{{ if eq .Section "resources" }}
+  <div class="card-grid">
+    {{ range .Pages.ByParam "title" }}
+      <article class="card">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary }}</p>
+        <div class="meta-line">
+          <span>{{ .Params.category }}</span>
+          <span>{{ .Params.level }}</span>
+        </div>
+        <a class="button" href="{{ .RelPermalink }}">View resource</a>
+      </article>
+    {{ end }}
+  </div>
+{{ else if eq .Section "notes" }}
+  <ul class="post-list">
+    {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}">Read note</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+  <div class="article">
+    {{ .Content }}
+  </div>
+{{ end }}
+{{ end }}
