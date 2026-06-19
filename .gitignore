@@ -5,3 +5,7 @@ hugo_stats.json
 /netlify*
 *.log
 .hugo_build.lock
+node_modules
+
+# Local Netlify folder
+.netlify
