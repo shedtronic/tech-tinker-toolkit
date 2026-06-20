@@ -1,6 +1,6 @@
 ---
-title: "Notes & Blog"
-description: "Updates, teaching reflections, tutorials, and creative classroom notes."
+title: "News"
+description: "Updates, teaching reflections, tutorials, and new resource announcements."
 ---
 
-This section shares making notes, lesson ideas, and classroom reflections from the Tech Tinker Toolkit collection.
+This section shares news, lesson ideas, and classroom reflections from the Tech Tinker Toolkit collection.
