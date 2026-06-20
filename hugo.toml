@@ -7,7 +7,7 @@ enableRobotsTXT = true
 defaultContentLanguage = 'en'
 
 [params]
-  subtitle = 'Friendly creative technology resources for teachers, makers, and learners'
+  subtitle = 'Helpful creative technology resources for teachers, makers, and learners'
   description = 'A practical toolkit of STEAM-ready lessons, worksheets, maker projects, and creative tech learning materials.'
   author = 'Tech Tinker Toolkit'
   github = 'https://github.com/tech-tinker-toolkit'

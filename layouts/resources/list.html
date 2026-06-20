@@ -4,56 +4,6 @@
   {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
 </header>
 
-<section class="live-tpt">
-  <h2>Live on Teachers Pay Teachers</h2>
-  <div class="card-grid">
-    <article class="card">
-      <h3><a href="https://www.teacherspayteachers.com/Product/Design-Thinking-Unleash-Your-Creativity-Bundle-12068598" target="_blank" rel="noopener">Design Thinking: Unleash Your Creativity Bundle</a></h3>
-      <p>A creative design thinking resource bundle for idea generation, problem solving, and classroom innovation.</p>
-      <div class="meta-line"><span>Design</span></div>
-      <a class="button" href="https://www.teacherspayteachers.com/Product/Design-Thinking-Unleash-Your-Creativity-Bundle-12068598" target="_blank" rel="noopener">View on TPT</a>
-    </article>
-
-    <article class="card">
-      <h3><a href="https://www.teacherspayteachers.com/Product/STEMSTEAM-Icebreaker-Cards-Editable-Canva-Version-for-First-Week-Activities-13956703" target="_blank" rel="noopener">STEM/STEAM Icebreaker Cards – Editable Canva Version</a></h3>
-      <p>Editable first-week STEM/STEAM icebreaker cards for discussion, creativity, and classroom connection.</p>
-      <div class="meta-line"><span>STEM</span></div>
-      <a class="button" href="https://www.teacherspayteachers.com/Product/STEMSTEAM-Icebreaker-Cards-Editable-Canva-Version-for-First-Week-Activities-13956703" target="_blank" rel="noopener">View on TPT</a>
-    </article>
-
-    <article class="card">
-      <h3><a href="https://www.teacherspayteachers.com/Product/Design-Foundations-Principles-of-Design-Poster-Pack-and-Workshop-Plan-11068696" target="_blank" rel="noopener">Design Foundations: Principles of Design Poster Pack and Workshop Plan</a></h3>
-      <p>A visual design principles poster pack with workshop guidance for creative media, design, and art lessons.</p>
-      <div class="meta-line"><span>Visual Arts</span></div>
-      <a class="button" href="https://www.teacherspayteachers.com/Product/Design-Foundations-Principles-of-Design-Poster-Pack-and-Workshop-Plan-11068696" target="_blank" rel="noopener">View on TPT</a>
-    </article>
-
-    <article class="card">
-      <h3><a href="https://www.teacherspayteachers.com/Product/Story-Arc-Handout-Heros-Journey-Freytags-Pyramid-3-Act-Structure-13569348" target="_blank" rel="noopener">Story Arc Handout: Hero’s Journey, Freytag’s Pyramid, 3-Act Structure</a></h3>
-      <p>A clear storytelling structure handout for games, animation, creative writing, and media projects.</p>
-      <div class="meta-line"><span>Storytelling</span></div>
-      <a class="button" href="https://www.teacherspayteachers.com/Product/Story-Arc-Handout-Heros-Journey-Freytags-Pyramid-3-Act-Structure-13569348" target="_blank" rel="noopener">View on TPT</a>
-    </article>
-  </div>
-</section>
-
-<section class="coming-soon" style="margin-top:28px;">
-  <h2>Coming Soon</h2>
-  <div class="card-grid">
-    <article class="card">
-      <h3>Make an Arcade Game in One Lesson</h3>
-      <p>A beginner-friendly game design worksheet/project for quickly building a simple arcade-style game.</p>
-      <div class="meta-line"><span>Game Design</span></div>
-      <span class="button" aria-disabled="true">Coming Soon</span>
-    </article>
-
-    <article class="card">
-      <h3>Introduction to Micro:bit</h3>
-      <p>A starter resource introducing physical computing, simple coding, inputs, outputs, and creative micro:bit activities.</p>
-      <div class="meta-line"><span>Micro:bit</span></div>
-      <span class="button" aria-disabled="true">Coming Soon</span>
-    </article>
-  </div>
-</section>
+{{ partial "featured-resources.html" . }}
 
 {{ end }}

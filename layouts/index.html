@@ -1,27 +1,11 @@
 {{ define "main" }}
 <section class="hero">
-  <h1>{{ .Title }}</h1>
   <p>{{ .Params.tagline }}</p>
 </section>
 <section class="article">
   {{ .Content }}
 </section>
-<section>
-  <h2>Featured resources</h2>
-  <div class="card-grid">
-    {{ range first 6 (where .Site.RegularPages "Section" "resources") }}
-      <article class="card">
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Params.summary }}</p>
-        <div class="meta-line">
-          <span>{{ .Params.category }}</span>
-          <span>{{ .Params.level }}</span>
-        </div>
-        <a class="button" href="{{ .RelPermalink }}">Preview</a>
-      </article>
-    {{ end }}
-  </div>
-</section>
+{{ partial "featured-resources.html" . }}
 <section class="feature-card" style="padding: 28px; border: 2px solid #d35400; background: rgba(211, 84, 0, 0.03); border-radius: 20px; margin-top: 24px;">
   <h2 style="margin-top: 0;">📦 Purchase Ready-to-Use Resources</h2>
   <p>Browse our complete collection of printable lesson packs, worksheets, and activity bundles on Teachers Pay Teachers.</p>
