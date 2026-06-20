@@ -13,7 +13,7 @@ defaultContentLanguage = 'en'
   github = 'https://github.com/tech-tinker-toolkit'
   newsletter = '#'
   etsy = '#'
-  teacherspayteachers = '#'
+  teacherspayteachers = 'https://www.teacherspayteachers.com/store/tech-tinker-toolkit'
   gumroad = '#'
 
 [outputs]
